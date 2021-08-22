@@ -42,14 +42,16 @@ func isSubStructureHelper(x *TreeNode, y *TreeNode) bool {
 	return false
 }
 
-type TestCase1 struct {
+type TestCaseOffer26 struct {
 	A   *TreeNode
 	B   *TreeNode
 	ans bool
 }
 
-func Run1() {
-	tests := []TestCase1{
+type Offer26 struct{}
+
+func (o *Offer26) Run() {
+	tests := []TestCaseOffer26{
 		{
 			A:   buildTreeFromString("3,4,5,1,2,null,null,null,null,null,null"),
 			B:   buildTreeFromString("4,1,null,null,null"),
@@ -69,8 +71,8 @@ func Run1() {
 	for i, t := range tests {
 		res := isSubStructure(t.A, t.B)
 		if res != t.ans {
-			log.Fatalf("Test %d Failed. Expect %v, Got %v", i, t.ans, res)
+			log.Fatalf("[Offer26] Test %d Failed. Expect %v, Got %v", i, t.ans, res)
 		}
 	}
-	fmt.Println("All tests passed")
+	fmt.Println("[Offer26] All tests passed")
 }

@@ -1,4 +1,4 @@
-package p875
+package binarysearch
 
 import (
 	"fmt"
@@ -51,15 +51,17 @@ func findMax(arr []int) int {
 	return max
 }
 
-type TestCase struct {
+type TestCaseP875 struct {
 	id    int
 	piles []int
 	h     int
 	ans   int
 }
 
-func Run() {
-	test1 := &TestCase{
+type P875 struct{}
+
+func (p *P875) Run() {
+	test1 := &TestCaseP875{
 		id:    1,
 		piles: []int{3, 6, 7, 11},
 		h:     8,
@@ -70,7 +72,7 @@ func Run() {
 		log.Fatalf("test %d failed, expect: %d, got: %d", test1.id, test1.ans, result1)
 	}
 
-	test2 := &TestCase{
+	test2 := &TestCaseP875{
 		id:    2,
 		piles: []int{30, 11, 23, 4, 20},
 		h:     5,
@@ -81,7 +83,7 @@ func Run() {
 		log.Fatalf("test %d failed, expect: %d, got: %d", test2.id, test2.ans, result2)
 	}
 
-	test3 := &TestCase{
+	test3 := &TestCaseP875{
 		id:    3,
 		piles: []int{30, 11, 23, 4, 20},
 		h:     6,
@@ -92,7 +94,7 @@ func Run() {
 		log.Fatalf("test %d failed, expect: %d, got: %d", test3.id, test3.ans, result3)
 	}
 
-	test4 := &TestCase{
+	test4 := &TestCaseP875{
 		id:    4,
 		piles: []int{5},
 		h:     4,
@@ -100,8 +102,8 @@ func Run() {
 	}
 	result4 := minEatingSpeed(test4.piles, test4.h)
 	if result4 != test4.ans {
-		log.Fatalf("test %d failed, expect: %d, got: %d", test4.id, test4.ans, result4)
+		log.Fatalf("[P875] test %d failed, expect: %d, got: %d", test4.id, test4.ans, result4)
 	}
 
-	fmt.Println("All tests passed.")
+	fmt.Println("[P875] All tests passed.")
 }

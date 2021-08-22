@@ -30,13 +30,15 @@ func numWays(n int) int {
 	return c
 }
 
-type TestCase1 struct {
+type Offer10 struct{}
+
+type TestCaseOffer10 struct {
 	n   int
 	ans int
 }
 
-func Run1() {
-	tests := []TestCase1{
+func (o *Offer10) Run() {
+	tests := []TestCaseOffer10{
 		{
 			n:   0,
 			ans: 1,
@@ -57,8 +59,8 @@ func Run1() {
 	for i, t := range tests {
 		res := numWays(t.n)
 		if res != t.ans {
-			log.Fatalf("Test %d failed. Expect: %d, Got %d\n", i, t.ans, res)
+			log.Fatalf("[Offer10] Test %d failed. Expect: %d, Got %d\n", i, t.ans, res)
 		}
 	}
-	fmt.Println("All tests passed")
+	fmt.Println("[Offer10] All tests passed")
 }

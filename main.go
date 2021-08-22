@@ -1,10 +1,12 @@
 package main
 
-import "github.com/tonyliang/coding-interview-note/dp"
+import (
+	"github.com/tonyliang/coding-interview-note/binarysearch"
+	"github.com/tonyliang/coding-interview-note/dp"
+	h "github.com/tonyliang/coding-interview-note/helper"
+	"github.com/tonyliang/coding-interview-note/tree"
+)
 
-//"github.com/tonyliang/coding-interview-note/tree"
-// "github.com/tonyliang/coding-interview-note/binary-search/p154"
-// "github.com/tonyliang/coding-interview-note/binary-search/p154"
 // "github.com/tonyliang/coding-interview-note/array/offer53"
 // "github.com/tonyliang/coding-interview-note/array/x1"
 // "github.com/tonyliang/coding-interview-note/strings/offer58"
@@ -21,9 +23,18 @@ import "github.com/tonyliang/coding-interview-note/dp"
 // "github.com/tonyliang/coding-interview-note/binary-search/p875"
 
 func main() {
-	dp.Run()
-	// tree.Run()
-	// p154.Run()
+	runners := []h.Runnable{
+		&binarysearch.P154{},
+		&binarysearch.P475{},
+		&binarysearch.P875{},
+		&tree.Offer26{},
+		&dp.Offer10{},
+		&dp.Offer42{},
+	}
+	for _, runner := range runners {
+		runner.Run()
+	}
+
 	// offer53.Run()
 	// x1.Run()
 	// offer58.Run()

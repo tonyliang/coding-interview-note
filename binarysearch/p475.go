@@ -1,4 +1,4 @@
-package p475
+package binarysearch
 
 import (
 	"fmt"
@@ -119,14 +119,16 @@ func Abs(a int) int {
 	return a
 }
 
-type TestCase struct {
+type TestCaseP475 struct {
 	houses  []int
 	heaters []int
 	ans     int
 }
 
-func Run() {
-	tests := []TestCase{
+type P475 struct{}
+
+func (p *P475) Run() {
+	tests := []TestCaseP475{
 		// {
 		// 	houses:  []int{1, 2, 3},
 		// 	heaters: []int{2},
@@ -167,8 +169,8 @@ func Run() {
 	for i, t := range tests {
 		result = findRadius(t.houses, t.heaters)
 		if result != t.ans {
-			log.Fatalf("Test %d failed. Expect: %d, Got: %d", i, t.ans, result)
+			log.Fatalf("[P475] Test %d failed. Expect: %d, Got: %d", i, t.ans, result)
 		}
 	}
-	fmt.Println("All tests passed")
+	fmt.Println("[P475] All tests passed")
 }

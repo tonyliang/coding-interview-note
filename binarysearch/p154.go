@@ -1,4 +1,4 @@
-package p154
+package binarysearch
 
 import (
 	"fmt"
@@ -46,13 +46,15 @@ func findMin(nums []int) int {
 	return nums[left]
 }
 
-type TestCase struct {
+type TestCaseP154 struct {
 	nums []int
 	ans  int
 }
 
-func Run() {
-	tests := []TestCase{
+type P154 struct{}
+
+func (p *P154) Run() {
+	tests := []TestCaseP154{
 		{
 			nums: []int{3, 4, 5, 1, 2},
 			ans:  1,
@@ -78,8 +80,8 @@ func Run() {
 	for i, t := range tests {
 		res := findMin(t.nums)
 		if res != t.ans {
-			log.Fatalf("Test %d failed. Expect %v, Got %v", i, t.ans, res)
+			log.Fatalf("[P154] Test %d failed. Expect %v, Got %v", i, t.ans, res)
 		}
 	}
-	fmt.Println("All tests passed")
+	fmt.Println("[P154] All tests passed")
 }
