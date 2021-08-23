@@ -1,4 +1,4 @@
-package offer05
+package strings
 
 import (
 	"fmt"
@@ -17,13 +17,15 @@ func replaceSpace(s string) string {
 	return result
 }
 
-type TestCase struct {
+type TestCaseOffer05 struct {
 	s   string
 	ans string
 }
 
-func Run() {
-	tests := []TestCase{
+type Offer05 struct{}
+
+func (o *Offer05) Run() {
+	tests := []TestCaseOffer05{
 		{
 			s:   " ",
 			ans: "%20",
@@ -44,8 +46,8 @@ func Run() {
 	for i, t := range tests {
 		res := replaceSpace(t.s)
 		if res != t.ans {
-			log.Fatalf("Test %d Failed. Expect %v, Got %v\n", i, t.ans, res)
+			log.Fatalf("[Offer05] Test %d Failed. Expect %v, Got %v\n", i, t.ans, res)
 		}
 	}
-	fmt.Println("All tests passed")
+	fmt.Println("[Offer05] All tests passed")
 }

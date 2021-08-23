@@ -1,11 +1,9 @@
 //https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
-package offer06
+package linkedlist
 
 import (
 	"fmt"
 	"log"
-
-	"github.com/tonyliang/coding-interview-note/linkedlist/util"
 )
 
 type Result struct {
@@ -13,7 +11,7 @@ type Result struct {
 }
 
 //This implementation consumes less space but needs to iterate the list twice.
-func reversePrint(head *util.ListNode) []int {
+func reversePrint(head *ListNode) []int {
 	if head == nil {
 		return make([]int, 0)
 	}
@@ -33,7 +31,7 @@ func reversePrint(head *util.ListNode) []int {
 }
 
 //This implementation consumes more space.
-func reversePrint2(head *util.ListNode) []int {
+func reversePrint2(head *ListNode) []int {
 	result := &Result{
 		data: make([]int, 0),
 	}
@@ -44,22 +42,24 @@ func reversePrint2(head *util.ListNode) []int {
 	return result.data
 }
 
-func helper(head *util.ListNode, r *Result) {
+func helper(head *ListNode, r *Result) {
 	if head.Next != nil {
 		helper(head.Next, r)
 	}
 	r.data = append(r.data, head.Val)
 }
 
-type TestCase struct {
-	head *util.ListNode
+type Offer06 struct{}
+
+type TestCaseOffer06 struct {
+	head *ListNode
 	ans  []int
 }
 
-func Run() {
-	tests := []TestCase{
+func (o *Offer06) Run() {
+	tests := []TestCaseOffer06{
 		{
-			head: util.NewLinkedListFromSlice([]int{1, 2, 3}),
+			head: NewLinkedListFromSlice([]int{1, 2, 3}),
 			ans:  []int{3, 2, 1},
 		},
 		{
@@ -67,15 +67,15 @@ func Run() {
 			ans:  []int{},
 		},
 		{
-			head: util.NewLinkedListFromSlice([]int{3, 4, 5, 6}),
+			head: NewLinkedListFromSlice([]int{3, 4, 5, 6}),
 			ans:  []int{6, 5, 4, 3},
 		},
 	}
 	for i, t := range tests {
 		res := reversePrint(t.head)
-		if !util.Equal(res, t.ans) {
-			log.Fatalf("Test %d Failed. Expect %v, Got %v", i, t.ans, res)
+		if !Equal(res, t.ans) {
+			log.Fatalf("[offer06] Test %d Failed. Expect %v, Got %v", i, t.ans, res)
 		}
 	}
-	fmt.Println("All tests passed")
+	fmt.Println("[offer06] All tests passed")
 }

@@ -1,4 +1,4 @@
-package offer58
+package strings
 
 import (
 	"fmt"
@@ -14,14 +14,16 @@ func reverseLeftWords(s string, n int) string {
 	return s[count:] + s[:count]
 }
 
-type TestCase struct {
+type Offer58 struct{}
+
+type TestCaseOffer58 struct {
 	s   string
 	n   int
 	ans string
 }
 
-func Run() {
-	tests := []TestCase{
+func (o *Offer58) Run() {
+	tests := []TestCaseOffer58{
 		{
 			s:   "",
 			n:   10,
@@ -51,8 +53,8 @@ func Run() {
 	for i, t := range tests {
 		res := reverseLeftWords(t.s, t.n)
 		if res != t.ans {
-			log.Fatalf("Test %d failed. Expect: %v, Got: %v", i, t.ans, res)
+			log.Fatalf("[Offer58] Test %d failed. Expect: %v, Got: %v", i, t.ans, res)
 		}
 	}
-	fmt.Println("All tests passed")
+	fmt.Println("[Offer58] All tests passed")
 }

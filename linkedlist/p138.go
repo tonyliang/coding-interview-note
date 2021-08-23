@@ -1,4 +1,4 @@
-package p138
+package linkedlist
 
 type Node struct {
 	Val    int
