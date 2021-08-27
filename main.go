@@ -15,6 +15,7 @@ func main() {
 		&binarysearch.P154{},
 		&binarysearch.P475{},
 		&binarysearch.P875{},
+		&binarysearch.Offer34{},
 		&tree.Offer26{},
 		&dp.Offer47{},
 		&dp.Offer46{},
@@ -28,6 +29,7 @@ func main() {
 		&linkedlist.Offer18{},
 		&linkedlist.Offer22{},
 		&linkedlist.Offer25{},
+		&linkedlist.P426{},
 		&recursion.Offer12{},
 		&recursion.Offer13{},
 	}

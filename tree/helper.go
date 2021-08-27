@@ -11,6 +11,10 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+func BuildTreeFromString(data string) *TreeNode {
+	return buildTreeFromString(data)
+}
+
 func buildTreeFromString(data string) *TreeNode {
 	tokens := strings.Split(data, ",")
 	if len(tokens) == 0 {
