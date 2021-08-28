@@ -1,4 +1,4 @@
-package x1
+package array
 
 import (
 	"fmt"
@@ -28,13 +28,13 @@ func Sorted(order []int, value []string) []string {
 		if order[i] == i {
 			i++
 		} else {
-			swap(order, value, i, order[i])
+			swapHelper(order, value, i, order[i])
 		}
 	}
 	return value
 }
 
-func swap(A []int, B []string, i, j int) {
+func swapHelper(A []int, B []string, i, j int) {
 	t := A[i]
 	A[i] = A[j]
 	A[j] = t
@@ -44,14 +44,15 @@ func swap(A []int, B []string, i, j int) {
 	B[j] = x
 }
 
-type TestCase struct {
+type X1 struct{}
+type TestCaseX1 struct {
 	A   []int
 	B   []string
 	ans []string
 }
 
-func Run() {
-	tests := []TestCase{
+func (x *X1) Run() {
+	tests := []TestCaseX1{
 		{
 			A:   []int{2, 4, 1, 3, 0},
 			B:   []string{"tony", "jack", "lynn", "mark", "mike"},
@@ -71,8 +72,8 @@ func Run() {
 	for i, t := range tests {
 		res := Sorted(t.A, t.B)
 		if !h.Equal(t.ans, res) {
-			log.Fatalf("Test %d Failed. Expect %v, Got %v", i, t.ans, res)
+			log.Fatalf("[X1] Test %d Failed. Expect %v, Got %v", i, t.ans, res)
 		}
 	}
-	fmt.Println("All tests passed")
+	fmt.Println("[X1] All tests passed")
 }

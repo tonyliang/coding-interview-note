@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/tonyliang/coding-interview-note/array"
 	"github.com/tonyliang/coding-interview-note/binarysearch"
 	"github.com/tonyliang/coding-interview-note/dp"
 	h "github.com/tonyliang/coding-interview-note/helper"
@@ -32,6 +33,9 @@ func main() {
 		&linkedlist.P426{},
 		&recursion.Offer12{},
 		&recursion.Offer13{},
+		&array.Offer53{},
+		&array.X1{},
+		&array.Offer45{},
 	}
 	for _, runner := range runners {
 		runner.Run()

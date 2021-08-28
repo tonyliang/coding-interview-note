@@ -1,4 +1,4 @@
-package offer03
+package array
 
 /*
 找出数组中重复的数字。
@@ -43,17 +43,11 @@ func findRepeatNumber(nums []int) int {
 			} else {
 				//swap (moving nums[i] to its correct index
 				//might be in a loop until it gets swapped to the right location
-				swap(nums, i, nums[i])
+				SwapInt(nums, i, nums[i])
 			}
 		}
 	}
 	return -1
-}
-
-func swap(arr []int, i, j int) {
-	t := arr[i]
-	arr[i] = arr[j]
-	arr[j] = t
 }
 
 //Add 1 to each element so as to handle 0 value at index 0.

@@ -1,4 +1,4 @@
-package offer53
+package array
 
 import (
 	"fmt"
@@ -52,13 +52,14 @@ func missingNumber(nums []int) int {
 	}
 }
 
-type TestCase struct {
+type Offer53 struct{}
+type TestCaseOffer53 struct {
 	nums []int
 	ans  int
 }
 
-func Run() {
-	tests := []TestCase{
+func (o *Offer53) Run() {
+	tests := []TestCaseOffer53{
 		{
 			nums: []int{0},
 			ans:  1,
@@ -87,8 +88,8 @@ func Run() {
 	for i, t := range tests {
 		res := missingNumber(t.nums)
 		if res != t.ans {
-			log.Fatalf("Test %d failed. Expect %d, Got %d", i, t.ans, res)
+			log.Fatalf("[Offer53] Test %d failed. Expect %d, Got %d", i, t.ans, res)
 		}
 	}
-	fmt.Println("All tests passed")
+	fmt.Println("[Offer53] All tests passed")
 }
