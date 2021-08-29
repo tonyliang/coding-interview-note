@@ -36,6 +36,7 @@ func main() {
 		&array.Offer53{},
 		&array.X1{},
 		&array.Offer45{},
+		&array.Offer61{},
 	}
 	for _, runner := range runners {
 		runner.Run()
