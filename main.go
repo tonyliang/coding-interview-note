@@ -35,10 +35,11 @@ func main() {
 		&recursion.Offer13{},
 		&array.Offer53{},
 		&array.X1{},
+		&array.Offer40{},
 		&array.Offer45{},
 		&array.Offer61{},
 	}
-	for _, runner := range runners {
-		runner.Run()
+	for _, r := range runners {
+		r.Run()
 	}
 }
