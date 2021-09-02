@@ -18,6 +18,7 @@ func main() {
 		&binarysearch.P875{},
 		&binarysearch.Offer34{},
 		&binarysearch.Offer54{},
+		&binarysearch.Offer33{},
 		&tree.Offer26{},
 		&tree.Offer34{},
 		&tree.Offer07{},
