@@ -36,6 +36,7 @@ func main() {
 		&linkedlist.P426{},
 		&recursion.Offer12{},
 		&recursion.Offer13{},
+		&recursion.Offer16{},
 		&array.Offer53{},
 		&array.X1{},
 		&array.Offer40{},
