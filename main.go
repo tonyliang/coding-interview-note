@@ -20,6 +20,7 @@ func main() {
 		&binarysearch.Offer54{},
 		&tree.Offer26{},
 		&tree.Offer34{},
+		&tree.Offer07{},
 		&dp.Offer47{},
 		&dp.Offer46{},
 		&dp.Offer10{},
