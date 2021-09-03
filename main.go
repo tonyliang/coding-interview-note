@@ -43,6 +43,7 @@ func main() {
 		&array.X1{},
 		&array.Offer40{},
 		&array.Offer45{},
+		&array.Offer57{},
 		&array.Offer61{},
 		&array.Offer66{},
 	}
