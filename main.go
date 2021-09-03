@@ -26,6 +26,7 @@ func main() {
 		&dp.Offer46{},
 		&dp.Offer10{},
 		&dp.Offer42{},
+		&dp.P343{},
 		&strings.Offer05{},
 		&strings.Offer48{},
 		&strings.Offer58{},
@@ -43,6 +44,7 @@ func main() {
 		&array.Offer40{},
 		&array.Offer45{},
 		&array.Offer61{},
+		&array.Offer66{},
 	}
 	for _, r := range runners {
 		r.Run()
