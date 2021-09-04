@@ -6,7 +6,9 @@ import (
 	"github.com/tonyliang/coding-interview-note/dp"
 	h "github.com/tonyliang/coding-interview-note/helper"
 	"github.com/tonyliang/coding-interview-note/linkedlist"
+	"github.com/tonyliang/coding-interview-note/matrix"
 	"github.com/tonyliang/coding-interview-note/recursion"
+	"github.com/tonyliang/coding-interview-note/stack"
 	"github.com/tonyliang/coding-interview-note/strings"
 	"github.com/tonyliang/coding-interview-note/tree"
 )
@@ -46,6 +48,9 @@ func main() {
 		&array.Offer57{},
 		&array.Offer61{},
 		&array.Offer66{},
+		&matrix.Offer29{},
+		&stack.P155{},
+		&stack.Offer31{},
 	}
 	for _, r := range runners {
 		r.Run()

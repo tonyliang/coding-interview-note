@@ -1,4 +1,4 @@
-package p155
+package stack
 
 import (
 	"fmt"
@@ -50,14 +50,15 @@ func (this *MinStack) Min() int {
  * param_4 := obj.Min();
  */
 
-type TestCase struct {
+type P155 struct{}
+type TestCaseP155 struct {
 	op  string
 	val interface{}
 	ans interface{}
 }
 
-func Run() {
-	tests := []TestCase{
+func (p *P155) Run() {
+	tests := []TestCaseP155{
 		{
 			op:  "push",
 			val: -2,
@@ -110,8 +111,8 @@ func Run() {
 			res = obj.Top()
 		}
 		if res != t.ans {
-			log.Fatalf("Test %d failed. Expect %v, Got %v\n", i, t.ans, res)
+			log.Fatalf("[P155] Test %d failed. Expect %v, Got %v\n", i, t.ans, res)
 		}
 	}
-	fmt.Println("All tests passed")
+	fmt.Println("[P155] All tests passed")
 }
