@@ -32,6 +32,7 @@ func main() {
 		&strings.Offer05{},
 		&strings.Offer48{},
 		&strings.Offer58{},
+		&strings.Offer67{},
 		&linkedlist.P206{},
 		&linkedlist.Offer06{},
 		&linkedlist.Offer18{},
