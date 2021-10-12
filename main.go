@@ -5,6 +5,7 @@ import (
 	"github.com/tonyliang/coding-interview-note/binarysearch"
 	"github.com/tonyliang/coding-interview-note/dp"
 	h "github.com/tonyliang/coding-interview-note/helper"
+	"github.com/tonyliang/coding-interview-note/leetcode"
 	"github.com/tonyliang/coding-interview-note/linkedlist"
 	"github.com/tonyliang/coding-interview-note/matrix"
 	"github.com/tonyliang/coding-interview-note/recursion"
@@ -52,6 +53,16 @@ func main() {
 		&matrix.Offer29{},
 		&stack.P155{},
 		&stack.Offer31{},
+		&leetcode.Question500{},
+		&leetcode.Question503{},
+		&leetcode.Question416{},
+		&leetcode.Question494{},
+		&leetcode.Question496{},
+		&leetcode.Question507{},
+		&leetcode.Question508{},
+		&leetcode.Question513{},
+		&leetcode.Question515{},
+		&leetcode.Question518{},
 	}
 	for _, r := range runners {
 		r.Run()
