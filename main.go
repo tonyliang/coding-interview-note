@@ -15,6 +15,8 @@ import (
 )
 
 func main() {
+	// helper.TestBST()
+	// return
 	runners := []h.Runnable{
 		&binarysearch.P154{},
 		&binarysearch.P475{},
@@ -53,6 +55,7 @@ func main() {
 		&matrix.Offer29{},
 		&stack.P155{},
 		&stack.Offer31{},
+		&leetcode.Question218{},
 		&leetcode.Question416{},
 		&leetcode.Question417{},
 		&leetcode.Question494{},
@@ -65,6 +68,19 @@ func main() {
 		&leetcode.Question515{},
 		&leetcode.Question518{},
 		&leetcode.Question523{},
+		&leetcode.Question524{},
+		&leetcode.Question525{},
+		//taking too long to run
+		//&leetcode.Question526{},
+		&leetcode.Question529{},
+		&leetcode.Question530{},
+		&leetcode.Question532{},
+		&leetcode.Question542{},
+		&leetcode.Question547{},
+		&leetcode.Question554{},
+		&leetcode.Question567{},
+		&leetcode.Question576{},
+		&leetcode.Question581{},
 	}
 	for _, r := range runners {
 		r.Run()

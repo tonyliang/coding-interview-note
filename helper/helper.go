@@ -38,6 +38,20 @@ func Equal(a, b interface{}) bool {
 			}
 		}
 		return true
+	case [][]byte:
+		aa := a.([][]byte)
+		bb := b.([][]byte)
+		if len(aa) != len(bb) {
+			return false
+		}
+		for i := 0; i < len(aa); i++ {
+			for j := 0; j < len(aa[0]); j++ {
+				if aa[i][j] != bb[i][j] {
+					return false
+				}
+			}
+		}
+		return true
 	case []int:
 		aa := a.([]int)
 		bb := b.([]int)
